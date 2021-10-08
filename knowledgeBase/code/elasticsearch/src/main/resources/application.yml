@@ -1,0 +1,5 @@
+server:
+  port: 9797
+es:
+  host: 117.78.6.97
+  port: 9200
