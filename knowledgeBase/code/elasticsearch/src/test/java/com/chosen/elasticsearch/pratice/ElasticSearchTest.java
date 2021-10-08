@@ -21,11 +21,17 @@ public class ElasticSearchTest {
     @Autowired
     private RestHighLevelClient esClient;
 
+    /***
+     * 测试创建索引
+     */
+    public void testIndex(){
+    }
+
     /**
-     * 测试索引数据
+     * 测试新增 文档数据
      */
     @Test
-    public void testIndex() throws IOException {
+    public void testDocument() throws IOException {
         log.info("client:::{}", esClient);
         IndexRequest request = new IndexRequest("users");
         request.id("1");
@@ -41,6 +47,14 @@ public class ElasticSearchTest {
 
     /**
      * 测试复杂查询（DSL）
+     *
+     * SearchSourBuilder QueryBuilders
+     * 分页 from size
+     * sort
+     * fetchSource(String[] includes, String[] excludes) 查询字段
+     * bool 组合查询
+     * fuzzyQuery 模糊查询(fuzziness())
+     * highlighter(HighLightBuilder builder) 高亮查询
      */
     public void testDSLSearch(){
 

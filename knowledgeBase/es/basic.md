@@ -127,7 +127,7 @@ match_phrase：不分词的匹配，模糊查询，相当于mysql的like。除�
 
 
 
-复合查询：组合多种查询条件
+复合查询bool：组合多种查询条件
 
 `must`：必须满足
 
@@ -139,7 +139,7 @@ match_phrase：不分词的匹配，模糊查询，相当于mysql的like。除�
 
 
 
-过滤查询
+过滤查询filter
 
 ![image-20211003162924120](basic.assets/image-20211003162924120.png)
 
